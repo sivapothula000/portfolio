@@ -84,29 +84,15 @@ const Hero = () => {
           </motion.div>
         </div>
 
-        {/* Optional Code visual or abstract shape */}
+        {/* Profile Image */}
         <motion.div 
           initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1, delay: 0.5 }}
           className="hero-visual"
         >
-          <div className="glass-card hero-code-card">
-            <div className="card-header">
-              <div className="dot red"></div>
-              <div className="dot yellow"></div>
-              <div className="dot green"></div>
-            </div>
-            <pre>
-              <code>
-<span className="code-keyword">const</span> <span className="code-var">developer</span> = {'{'}
-<br/>  <span className="code-prop">name</span>: <span className="code-string">'Siva Anand'</span>,
-<br/>  <span className="code-prop">skills</span>: [<span className="code-string">'React'</span>, <span className="code-string">'Node.js'</span>, <span className="code-string">'Python'</span>],
-<br/>  <span className="code-prop">passions</span>: [<span className="code-string">'Machine Learning'</span>, <span className="code-string">'Web Dev'</span>],
-<br/>  <span className="code-prop">isAvailable</span>: <span className="code-keyword">true</span>
-<br/>{'}'};
-              </code>
-            </pre>
+          <div className="profile-img-container">
+            <img src="src/assets/hero1.png" alt="siva" className="profile-img" />
           </div>
         </motion.div>
       </div>
