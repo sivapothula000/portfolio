@@ -4,6 +4,7 @@ import { ArrowRight, Mail } from 'lucide-react';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import './Hero.css';
 import { Link } from 'react-scroll';
+import heroImg from '../assets/hero1.png';
 
 const Hero = () => {
   return (
@@ -92,7 +93,7 @@ const Hero = () => {
           className="hero-visual"
         >
           <div className="profile-img-container">
-            <img src="src/assets/hero1.png" alt="siva" className="profile-img" />
+            <img src={heroImg} alt="siva" className="profile-img" />
           </div>
         </motion.div>
       </div>
