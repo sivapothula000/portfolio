@@ -5,10 +5,16 @@ import './Certifications.css';
 
 const certificationsList = [
   {
-    title: 'Hackathon First Runner Up',
-    issuer: 'National Tech Fest 2024',
-    date: 'March 2024',
-    description: 'Developed an AI-driven smart agriculture solution that won 2nd place among 50+ teams.'
+    title: 'Git/Github',
+    issuer: 'CodeChef',
+    date: 'Feb 2026',
+    description: 'Learned the basics of Git and Github'
+  },
+  {
+    title: 'Generative AI by Google Cloud',
+    issuer: 'L4G',
+    date: 'Nov 2024',
+    description: 'Gained the Generative AI skills and knowledge'
   },
   {
     title: 'AWS Certified Cloud Practitioner',
@@ -27,7 +33,7 @@ const certificationsList = [
 const Certifications = () => {
   return (
     <section id="certifications" className="section container">
-      <motion.h2 
+      <motion.h2
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-100px" }}
@@ -38,7 +44,7 @@ const Certifications = () => {
 
       <div className="timeline">
         {certificationsList.map((item, index) => (
-          <motion.div 
+          <motion.div
             key={index}
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
