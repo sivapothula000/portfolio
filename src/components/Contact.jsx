@@ -3,21 +3,40 @@ import { motion } from 'framer-motion';
 import { Send, FileText, Mail, MapPin } from 'lucide-react';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import './Contact.css';
+import emailjs from "@emailjs/browser";
 
 const Contact = () => {
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    // Simulate API call
-    setTimeout(() => {
-      setIsSubmitting(false);
-      setFormData({ name: '', email: '', message: '' });
-      alert('Message sent successfully!');
-    }, 1500);
-  };
+const handleSubmit = (e) => {
+  e.preventDefault();
+  setIsSubmitting(true);
+
+  emailjs
+    .send(
+      "YOUR_SERVICE_ID",
+      "YOUR_TEMPLATE_ID",
+      {
+        from_name: formData.name,
+        from_email: formData.email,
+        message: formData.message,
+      },
+      "YOUR_PUBLIC_KEY"
+    )
+    .then(
+      () => {
+        setIsSubmitting(false);
+        setFormData({ name: "", email: "", message: "" });
+        alert("Message sent successfully!");
+      },
+      (error) => {
+        setIsSubmitting(false);
+        alert("Failed to send message");
+        console.log(error);
+      }
+    );
+};
 
   return (
     <section id="contact" className="section container">
