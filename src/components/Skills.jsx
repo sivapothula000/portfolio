@@ -1,5 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { SiCodechef } from 'react-icons/si';
+import { SiLeetcode } from 'react-icons/si';
 import './Skills.css';
 
 const skillsData = [
@@ -14,7 +16,7 @@ const skillsData = [
 const Skills = () => {
   return (
     <section id="skills" className="section container">
-      <motion.h2 
+      <motion.h2
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-100px" }}
@@ -25,7 +27,7 @@ const Skills = () => {
 
       <div className="skills-grid">
         {skillsData.map((skill, index) => (
-          <motion.div 
+          <motion.div
             key={skill.name}
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -38,7 +40,7 @@ const Skills = () => {
               <span className="skill-percentage">{skill.level}%</span>
             </div>
             <div className="progress-bg">
-              <motion.div 
+              <motion.div
                 className="progress-bar"
                 initial={{ width: 0 }}
                 whileInView={{ width: `${skill.level}%` }}
@@ -50,7 +52,8 @@ const Skills = () => {
           </motion.div>
         ))}
       </div>
-      
+
+
       {/* Decorative floating indicators */}
       <div className="skills-decor">
         <div className="decor-circle decor-1"></div>

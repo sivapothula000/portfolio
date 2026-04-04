@@ -6,6 +6,8 @@
   z-index: 2;
 }
 
+
+
 .skill-card {
   padding: 1.5rem;
   border-radius: 12px;
@@ -88,3 +90,5 @@
   bottom: -10%;
   right: -5%;
 }
+
+

@@ -60,7 +60,10 @@ const About = () => {
             <div className="bento-icon"><GraduationCap size={28} /></div>
             <h3>Education</h3>
             <p className="bento-highlight">B.Tech in Computer Science</p>
-            <p className="bento-sub">2021 - Present</p>
+            <p className="bento-sub">2024 - Present</p>
+            <br></br>
+            <p className="bento-highlight">Diploma in Electrical and Electronics Engineering</p>
+            <p className="bento-sub">2021 - 2024</p>
           </motion.div>
 
           <motion.div variants={itemVariants} className="glass-card bento-card">

@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, Mail } from 'lucide-react';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
+import { SiCodechef, SiLeetcode } from 'react-icons/si';
 import './Hero.css';
 import { Link } from 'react-scroll';
 import heroImg from '../assets/hero2.png';
@@ -79,8 +80,14 @@ const Hero = () => {
             <a href="https://linkedin.com" target="_blank" rel="noreferrer" className="social-icon">
               <FaLinkedin size={24} />
             </a>
-            <a href="mailto:siva@example.com" className="social-icon">
+            <a href="mailto:sivapothula0654@.com" className="social-icon">
               <Mail size={24} />
+            </a>
+            <a href="https://www.codechef.com/users/sivapothula000" target="_blank" rel="noreferrer" className="social-icon">
+              <SiCodechef size={24} />
+            </a>
+            <a href="https://leetcode.com/sivapothula000" target="_blank" rel="noreferrer" className="social-icon">
+              <SiLeetcode size={24} />
             </a>
           </motion.div>
         </div>
