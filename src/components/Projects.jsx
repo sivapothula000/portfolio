@@ -3,23 +3,28 @@ import { motion } from 'framer-motion';
 import { ExternalLink, Code } from 'lucide-react';
 import { FaGithub } from 'react-icons/fa';
 import './Projects.css';
+import travelGuardianImg from '../assets/travelguardian.png';
+import multiMlModelImg from '../assets/ml_models.png';
+import ecommerceImg from '../assets/ecommerce.png';
+import stockMarketImg from '../assets/stockMarket.png';
+
 
 const projectsData = [
   {
     title: 'TravelGuardian AI',
     description: 'AI-powered smart tourism planning and safety platform with real-time map integration and multi-agent systems.',
-    image: 'https://images.unsplash.com/photo-1488646953014-85cb44e25828?q=80&w=600&auto=format&fit=crop',
+    image: travelGuardianImg,
     tech: ['React', 'FastAPI', 'MongoDB', 'CrewAI'],
-    github: 'https://github.com',
-    demo: 'https://example.com'
+    github: 'https://github.com/sivapothula000/AI_TravelGuardian.git',
+    demo: null
   },
   {
-    title: 'E-Commerce Dashboard',
-    description: 'A comprehensive admin dashboard for managing products, visualizing sales data, and handling user roles.',
-    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=600&auto=format&fit=crop',
-    tech: ['Next.js', 'Tailwind', 'Node.js', 'PostgreSQL'],
-    github: 'https://github.com',
-    demo: 'https://example.com'
+    title: 'ML Multi-Model System',
+    description: 'Developed a Streamlit-based web application that integrates multiple machine learning models in one platform. The project includes Email Spam Detection, Handwritten Digit Classification, and House Price Prediction, allowing users to input data and get real-time predictions using trained ML models.',
+    image: multiMlModelImg,
+    tech: ['Python', 'Streamlit', 'Scikit-learn', 'NumPy'],
+    github: 'https://github.com/sivapothula000/ML_Models.git',
+    demo: 'https://siva-dl-models.streamlit.app/'
   },
   {
     title: 'Machine Learning Image Classifier',
@@ -28,13 +33,30 @@ const projectsData = [
     tech: ['Python', 'TensorFlow', 'Flask', 'OpenCV'],
     github: 'https://github.com',
     demo: null
+  },
+  {
+    title: 'E-Commerce Platform',
+    description: 'A full-stack ecommerce application with a React/Vite storefront and a Node.js/Express backend. It includes user auth, product search, cart and order flows, admin product management, and payment support with Stripe and Razorpay.',
+    image: ecommerceImg,
+    tech: ['React', 'Vite', 'Tailwind CSS', 'Node.js', 'Express', 'MongoDB', 'Mongoose', 'Stripe', 'Razorpay', 'Cloudinary'],
+    github: 'https://github.com/sivapothula000/E-commerce_Platform.git',
+    demo: null,
+  },{
+
+  
+    title: 'Stock Market Price Prediction',
+    description: 'A machine learning application that predicts future stock prices using an LSTM neural network. The system fetches historical stock data from Yahoo Finance, preprocesses it using MinMaxScaler, and forecasts future trends with deep learning. It also includes a Tkinter GUI for selecting companies, viewing current prices, and visualizing predicted stock trends.',
+    image: stockMarketImg,
+    tech: ['Python', 'TensorFlow', 'Keras', 'LSTM', 'Scikit-learn', 'Pandas', 'NumPy', 'Matplotlib', 'Tkinter', 'Yahoo Finance API'],
+    github: 'https://github.com/sivapothula000/Stock-Market-Future-Prediction.git',
+    demo: null
   }
 ];
 
 const Projects = () => {
   return (
     <section id="projects" className="section container">
-      <motion.div 
+      <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-100px" }}
@@ -48,7 +70,7 @@ const Projects = () => {
 
       <div className="projects-grid">
         {projectsData.map((project, index) => (
-          <motion.div 
+          <motion.div
             key={project.title}
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -73,15 +95,15 @@ const Projects = () => {
                 </div>
               </div>
             </div>
-            
+
             <div className="project-content">
               <h3 className="project-title">{project.title}</h3>
               <p className="project-desc">{project.description}</p>
-              
+
               <div className="project-tech-stack">
                 {project.tech.map((tech) => (
                   <span key={tech} className="tech-badge">
-                    <Code size={12} className="tech-icon"/> {tech}
+                    <Code size={12} className="tech-icon" /> {tech}
                   </span>
                 ))}
               </div>
