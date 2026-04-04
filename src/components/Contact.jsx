@@ -15,14 +15,14 @@ const handleSubmit = (e) => {
 
   emailjs
     .send(
-      "YOUR_SERVICE_ID",
-      "YOUR_TEMPLATE_ID",
+      import.meta.env.VITE_EMAILJS_SERVICE_ID,
+      import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
       {
         from_name: formData.name,
         from_email: formData.email,
         message: formData.message,
       },
-      "YOUR_PUBLIC_KEY"
+       import.meta.env.VITE_EMAILJS_PUBLIC_KEY
     )
     .then(
       () => {
