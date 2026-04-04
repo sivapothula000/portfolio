@@ -80,7 +80,7 @@ const Hero = () => {
             <a href="https://linkedin.com" target="_blank" rel="noreferrer" className="social-icon">
               <FaLinkedin size={24} />
             </a>
-            <a href="mailto:sivapothula0654@.com" className="social-icon">
+            <a href="mailto:sivapothula0654@gmail.com" className="social-icon">
               <Mail size={24} />
             </a>
             <a href="https://www.codechef.com/users/sivapothula000" target="_blank" rel="noreferrer" className="social-icon">
