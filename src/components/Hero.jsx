@@ -4,7 +4,7 @@ import { ArrowRight, Mail } from 'lucide-react';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import './Hero.css';
 import { Link } from 'react-scroll';
-import heroImg from '../assets/hero1.png';
+import heroImg from '../assets/hero2.png';
 
 const Hero = () => {
   return (
