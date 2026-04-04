@@ -16,6 +16,17 @@
   --glass-bg: rgba(255, 255, 255, 0.03);
   --glass-border: rgba(255, 255, 255, 0.08);
 }
+@media (max-width: 768px) {
+  .container {
+    padding: 0 1rem;
+  }
+}
+html, body {
+  overflow-x: hidden;
+}
+* {
+  max-width: 100%;
+}
 
 * {
   margin: 0;
