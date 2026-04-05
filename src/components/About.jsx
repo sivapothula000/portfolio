@@ -37,7 +37,7 @@ const About = () => {
           className="about-text-content"
         >
           <p>
-            I am a B.Tech Computer Science student with a deep passion for building intuitive, 
+            I am a B.Tech Computer Science(AIM) student with a deep passion for building intuitive, 
             high-performing web applications and exploring the frontiers of Artificial Intelligence. 
             My journey in tech is driven by curiosity and the desire to create software that 
             solves real-world problems.
