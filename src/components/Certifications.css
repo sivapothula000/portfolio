@@ -108,3 +108,47 @@
     height: 16px;
   }
 }
+
+.cert-list {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.cert-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  gap: 20px;
+}
+
+.cert-info {
+  flex: 1;
+}
+
+.cert-title {
+  font-size: 1.2rem;
+  margin-bottom: 12px;
+}
+
+.cert-image {
+  width: 120px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Mobile Responsive */
+
+@media (max-width: 768px) {
+  .cert-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .cert-image {
+    width: 100%;
+    height: auto;
+  }
+}
