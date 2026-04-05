@@ -9,38 +9,38 @@ const Contact = () => {
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-const handleSubmit = (e) => {
-  e.preventDefault();
-  setIsSubmitting(true);
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setIsSubmitting(true);
 
-  emailjs
-    .send(
-      import.meta.env.VITE_EMAILJS_SERVICE_ID,
-      import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
-      {
-        from_name: formData.name,
-        from_email: formData.email,
-        message: formData.message,
-      },
-       import.meta.env.VITE_EMAILJS_PUBLIC_KEY
-    )
-    .then(
-      () => {
-        setIsSubmitting(false);
-        setFormData({ name: "", email: "", message: "" });
-        alert("Message sent successfully!");
-      },
-      (error) => {
-        setIsSubmitting(false);
-        alert("Failed to send message");
-        console.log(error);
-      }
-    );
-};
+    emailjs
+      .send(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        {
+          from_name: formData.name,
+          from_email: formData.email,
+          message: formData.message,
+        },
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+      )
+      .then(
+        () => {
+          setIsSubmitting(false);
+          setFormData({ name: "", email: "", message: "" });
+          alert("Message sent successfully!");
+        },
+        (error) => {
+          setIsSubmitting(false);
+          alert("Failed to send message");
+          console.log(error);
+        }
+      );
+  };
 
   return (
     <section id="contact" className="section container">
-      <motion.div 
+      <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-100px" }}
@@ -54,7 +54,7 @@ const handleSubmit = (e) => {
 
       <div className="contact-container">
         {/* Contact Info & Resume */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, x: -50 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true, margin: "-50px" }}
@@ -64,7 +64,7 @@ const handleSubmit = (e) => {
           <div className="glass-card contact-card">
             <h3 className="card-title">Contact Information</h3>
             <p className="card-desc">Feel free to reach out for collaborations, opportunities, or just a tech chat!</p>
-            
+
             <ul className="info-list">
               <li>
                 <div className="info-icon"><Mail size={20} /></div>
@@ -86,6 +86,11 @@ const handleSubmit = (e) => {
             </div>
 
             <div className="resume-section">
+              <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" className="btn btn-secondary resume-btn">
+                👁  View Resume
+              </a>
+              <br></br>
+              <br></br>
               <a href="/resume.pdf" download className="btn btn-primary resume-btn">
                 <FileText size={18} /> Download Resume
               </a>
@@ -94,7 +99,7 @@ const handleSubmit = (e) => {
         </motion.div>
 
         {/* Contact Form */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, x: 50 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true, margin: "-50px" }}
@@ -104,50 +109,50 @@ const handleSubmit = (e) => {
           <form className="glass-card contact-form" onSubmit={handleSubmit}>
             <div className="form-group">
               <label htmlFor="name">Full Name</label>
-              <input 
-                type="text" 
-                id="name" 
-                className="form-control glass" 
+              <input
+                type="text"
+                id="name"
+                className="form-control glass"
                 placeholder="John Doe"
                 value={formData.name}
-                onChange={(e) => setFormData({...formData, name: e.target.value})}
+                onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                 required
               />
             </div>
-            
+
             <div className="form-group">
               <label htmlFor="email">Email Address</label>
-              <input 
-                type="email" 
-                id="email" 
-                className="form-control glass" 
+              <input
+                type="email"
+                id="email"
+                className="form-control glass"
                 placeholder="john@example.com"
                 value={formData.email}
-                onChange={(e) => setFormData({...formData, email: e.target.value})}
+                onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                 required
               />
             </div>
-            
+
             <div className="form-group">
               <label htmlFor="message">Message</label>
-              <textarea 
-                id="message" 
-                rows="5" 
-                className="form-control glass" 
+              <textarea
+                id="message"
+                rows="5"
+                className="form-control glass"
                 placeholder="How can I help you?"
                 value={formData.message}
-                onChange={(e) => setFormData({...formData, message: e.target.value})}
+                onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                 required
               ></textarea>
             </div>
-            
+
             <button type="submit" className="btn btn-primary submit-btn" disabled={isSubmitting}>
               {isSubmitting ? 'Sending...' : <><Send size={18} /> Send Message</>}
             </button>
           </form>
         </motion.div>
       </div>
-      
+
       {/* Footer */}
       <footer className="footer">
         <p>© {new Date().getFullYear()} Siva Anand. Built with React & Vite.</p>
