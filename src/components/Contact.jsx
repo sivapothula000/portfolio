@@ -77,10 +77,10 @@ const Contact = () => {
             </ul>
 
             <div className="social-links">
-              <a href="https://github.com" target="_blank" rel="noreferrer" className="social-btn">
+              <a href="https://github.com/sivapothula000" target="_blank" rel="noreferrer" className="social-btn">
                 <FaGithub size={20} />
               </a>
-              <a href="https://linkedin.com" target="_blank" rel="noreferrer" className="social-btn">
+              <a href="https://www.linkedin.com/in/pothula-siva-anand-a429853a8/" target="_blank" rel="noreferrer" className="social-btn">
                 <FaLinkedin size={20} />
               </a>
             </div>
