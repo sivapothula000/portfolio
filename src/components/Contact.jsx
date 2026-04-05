@@ -68,7 +68,7 @@ const Contact = () => {
             <ul className="info-list">
               <li>
                 <div className="info-icon"><Mail size={20} /></div>
-                <span>siva.anand@example.com</span>
+                <span>sivapothula0654@gmail.com</span>
               </li>
               <li>
                 <div className="info-icon"><MapPin size={20} /></div>
