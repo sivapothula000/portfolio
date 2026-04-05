@@ -74,16 +74,16 @@ const Hero = () => {
             transition={{ duration: 1, delay: 1.2 }}
             className="hero-socials"
           >
-            <a href="https://github.com" target="_blank" rel="noreferrer" className="social-icon">
+            <a href="https://github.com/sivapothula000" target="_blank" rel="noreferrer" className="social-icon">
               <FaGithub size={24} />
             </a>
-            <a href="https://linkedin.com" target="_blank" rel="noreferrer" className="social-icon">
+            <a href="https://www.linkedin.com/in/pothula-siva-anand-a429853a8/" target="_blank" rel="noreferrer" className="social-icon">
               <FaLinkedin size={24} />
             </a>
             <a href="mailto:sivapothula0654@gmail.com" className="social-icon">
               <Mail size={24} />
             </a>
-            <a href="https://www.codechef.com/users/sivapothula000" target="_blank" rel="noreferrer" className="social-icon">
+            <a href="https://www.codechef.com/users/sivaanand_000" target="_blank" rel="noreferrer" className="social-icon">
               <SiCodechef size={24} />
             </a>
             <a href="https://leetcode.com/sivapothula000" target="_blank" rel="noreferrer" className="social-icon">
