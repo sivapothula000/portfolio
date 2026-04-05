@@ -9,17 +9,18 @@ import ecommerceImg from '../assets/ecommerce.png';
 import stockMarketImg from '../assets/stockMarket.png';
 import toDoImg from '../assets/ToDoList.png';
 import weatherImg from '../assets/weather.png';
+import portfolioImg from '../assets/portfolio.png';
 
 
 const projectsData = [
   {
-    title: 'TravelGuardian AI',
-    description: 'AI-powered smart tourism planning and safety platform with real-time map integration and multi-agent systems.',
-    image: travelGuardianImg,
-    tech: ['React', 'FastAPI', 'MongoDB', 'CrewAI'],
-    github: 'https://github.com/sivapothula000/AI_TravelGuardian.git',
-    demo: null
-  },
+  title: 'Portfolio Website',
+  description: 'A modern developer portfolio showcasing projects, skills, certifications, and contact information. The website features smooth animations, responsive design, and interactive sections built with modern frontend technologies.',
+  image: portfolioImg,
+  tech: ['React', 'Framer Motion', 'CSS', 'Vite'],
+  github: 'https://github.com/sivapothula000/portfolio',
+  demo: 'https://portfoliosiva-two.vercel.app/'
+},
   {
     title: 'ML Multi-Model System',
     description: 'Developed a Streamlit-based web application that integrates multiple machine learning models in one platform. The project includes Email Spam Detection, Handwritten Digit Classification, and House Price Prediction, allowing users to input data and get real-time predictions using trained ML models.',
@@ -29,6 +30,14 @@ const projectsData = [
     demo: 'https://siva-dl-models.streamlit.app/'
   },
   {
+    title: 'Weather App',
+    description: 'A modern weather application that fetches real-time weather data using the OpenWeatherMap API. The app allows users to search for any city worldwide and view current temperature, weather conditions, humidity, and wind speed. Built with React and Vite, it provides a responsive and user-friendly interface with dynamic weather icons.',
+    image: weatherImg,
+    tech: ['React', 'JavaScript', 'Vite', 'CSS', 'OpenWeatherMap API'],
+    github: 'https://github.com/sivapothula000/Weather-App.git',
+    demo: 'https://weather-app-seven-bay-68.vercel.app/'
+  },
+  {
   title: 'To-Do List App',
   description: 'A full-stack task management application that allows users to add, view, and delete tasks through a simple and responsive interface. The frontend is built using HTML, CSS, and JavaScript, while the backend is developed using Node.js and Express.js. Task data is stored persistently in a MySQL database, ensuring tasks remain saved even after page refresh. The application demonstrates CRUD operations and REST API communication between the client and server.',
   image: toDoImg,
@@ -36,13 +45,29 @@ const projectsData = [
   github: 'https://github.com/sivapothula000/To-Do_list.git',
   demo: null
 },
+{
+    title: 'Stock Market Price Prediction',
+    description: 'A machine learning application that predicts future stock prices using an LSTM neural network. The system fetches historical stock data from Yahoo Finance, preprocesses it using MinMaxScaler, and forecasts future trends with deep learning. It also includes a Tkinter GUI for selecting companies, viewing current prices, and visualizing predicted stock trends.',
+    image: stockMarketImg,
+    tech: ['Python', 'TensorFlow', 'Keras', 'LSTM', 'Scikit-learn', 'Pandas', 'NumPy', 'Matplotlib', 'Tkinter', 'Yahoo Finance API'],
+    github: 'https://github.com/sivapothula000/Stock-Market-Future-Prediction.git',
+    demo: null
+  },
   {
-    title: 'Weather App',
-    description: 'A modern weather application that fetches real-time weather data using the OpenWeatherMap API. The app allows users to search for any city worldwide and view current temperature, weather conditions, humidity, and wind speed. Built with React and Vite, it provides a responsive and user-friendly interface with dynamic weather icons.',
-    image: weatherImg,
-    tech: ['React', 'JavaScript', 'Vite', 'CSS', 'OpenWeatherMap API'],
-    github: 'https://github.com/sivapothula000/Weather-App.git',
-    demo: 'https://weather-app-seven-bay-68.vercel.app/'
+    title: 'TravelGuardian AI',
+    description: 'AI-powered smart tourism planning and safety platform with real-time map integration and multi-agent systems.',
+    image: travelGuardianImg,
+    tech: ['React', 'FastAPI', 'MongoDB', 'CrewAI'],
+    github: 'https://github.com/sivapothula000/AI_TravelGuardian.git',
+    demo: null
+  },
+   {
+    title: 'E-Commerce Platform',
+    description: 'A full-stack ecommerce application with a React/Vite storefront and a Node.js/Express backend. It includes user auth, product search, cart and order flows, admin product management, and payment support with Stripe and Razorpay.',
+    image: ecommerceImg,
+    tech: ['React', 'Vite', 'Tailwind CSS', 'Node.js', 'Express', 'MongoDB', 'Mongoose', 'Stripe', 'Razorpay', 'Cloudinary'],
+    github: 'https://github.com/sivapothula000/E-commerce_Platform.git',
+    demo: null,
   },
   {
     title: 'Machine Learning Image Classifier',
@@ -52,21 +77,7 @@ const projectsData = [
     github: 'https://github.com',
     demo: null
   },
-  {
-    title: 'E-Commerce Platform',
-    description: 'A full-stack ecommerce application with a React/Vite storefront and a Node.js/Express backend. It includes user auth, product search, cart and order flows, admin product management, and payment support with Stripe and Razorpay.',
-    image: ecommerceImg,
-    tech: ['React', 'Vite', 'Tailwind CSS', 'Node.js', 'Express', 'MongoDB', 'Mongoose', 'Stripe', 'Razorpay', 'Cloudinary'],
-    github: 'https://github.com/sivapothula000/E-commerce_Platform.git',
-    demo: null,
-  },{
-    title: 'Stock Market Price Prediction',
-    description: 'A machine learning application that predicts future stock prices using an LSTM neural network. The system fetches historical stock data from Yahoo Finance, preprocesses it using MinMaxScaler, and forecasts future trends with deep learning. It also includes a Tkinter GUI for selecting companies, viewing current prices, and visualizing predicted stock trends.',
-    image: stockMarketImg,
-    tech: ['Python', 'TensorFlow', 'Keras', 'LSTM', 'Scikit-learn', 'Pandas', 'NumPy', 'Matplotlib', 'Tkinter', 'Yahoo Finance API'],
-    github: 'https://github.com/sivapothula000/Stock-Market-Future-Prediction.git',
-    demo: null
-  }
+ 
 ];
 
 const Projects = () => {
