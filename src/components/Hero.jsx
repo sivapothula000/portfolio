@@ -77,7 +77,7 @@ const Hero = () => {
             <a href="https://github.com/sivapothula000" target="_blank" rel="noreferrer" className="social-icon">
               <FaGithub size={24} />
             </a>
-            <a href="https://www.linkedin.com/in/pothula-siva-anand-a429853a8/" target="_blank" rel="noreferrer" className="social-icon">
+            <a href="https://www.linkedin.com/in/pothula-siva-anand/" target="_blank" rel="noreferrer" className="social-icon">
               <FaLinkedin size={24} />
             </a>
             <a href="mailto:sivapothula0654@gmail.com" className="social-icon">
