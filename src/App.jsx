@@ -6,6 +6,7 @@ import Skills from './components/Skills';
 import Projects from './components/Projects';
 import Certifications from './components/Certifications';
 import Contact from './components/Contact';
+import SivaAI from './components/AIAssistant';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Certifications />
         <Contact />
       </main>
+      <SivaAI />
     </div>
   );
 }
