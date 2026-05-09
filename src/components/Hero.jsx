@@ -83,7 +83,7 @@ const Hero = () => {
             <a href="mailto:sivapothula0654@gmail.com" className="social-icon">
               <Mail size={24} />
             </a>
-            <a href="https://www.codechef.com/users/sivaanand_000" target="_blank" rel="noreferrer" className="social-icon">
+            <a href="https://www.codechef.com/users/vvit24bq5a6136" target="_blank" rel="noreferrer" className="social-icon">
               <SiCodechef size={24} />
             </a>
             <a href="https://leetcode.com/sivapothula000" target="_blank" rel="noreferrer" className="social-icon">
