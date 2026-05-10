@@ -30,6 +30,14 @@ const projectsData = [
     demo: 'https://siva-dl-models.streamlit.app/'
   },
   {
+  title: 'To-Do List App',
+  description: 'A full-stack task management application that allows users to add, view, and delete tasks through a simple and responsive interface. The frontend is built using HTML, CSS, and JavaScript, while the backend is developed using Node.js and Express.js. Task data is stored persistently in a MySQL database, ensuring tasks remain saved even after page refresh. The application demonstrates CRUD operations and REST API communication between the client and server.',
+  image: toDoImg,
+  tech: ['HTML', 'CSS', 'JavaScript', 'Node.js', 'Express.js', 'MySQL'],
+  github: 'https://github.com/sivapothula000/To_Do_List_User_separated_MogoDB.git',
+  demo: 'https://task-manager-siva.vercel.app/login.html'
+},
+  {
     title: 'Weather App',
     description: 'A modern weather application that fetches real-time weather data using the OpenWeatherMap API. The app allows users to search for any city worldwide and view current temperature, weather conditions, humidity, and wind speed. Built with React and Vite, it provides a responsive and user-friendly interface with dynamic weather icons.',
     image: weatherImg,
@@ -37,14 +45,7 @@ const projectsData = [
     github: 'https://github.com/sivapothula000/Weather-App.git',
     demo: 'https://weather-app-seven-bay-68.vercel.app/'
   },
-  {
-  title: 'To-Do List App',
-  description: 'A full-stack task management application that allows users to add, view, and delete tasks through a simple and responsive interface. The frontend is built using HTML, CSS, and JavaScript, while the backend is developed using Node.js and Express.js. Task data is stored persistently in a MySQL database, ensuring tasks remain saved even after page refresh. The application demonstrates CRUD operations and REST API communication between the client and server.',
-  image: toDoImg,
-  tech: ['HTML', 'CSS', 'JavaScript', 'Node.js', 'Express.js', 'MySQL'],
-  github: 'https://github.com/sivapothula000/To-Do_list.git',
-  demo: null
-},
+  
 {
     title: 'Stock Market Price Prediction',
     description: 'A machine learning application that predicts future stock prices using an LSTM neural network. The system fetches historical stock data from Yahoo Finance, preprocesses it using MinMaxScaler, and forecasts future trends with deep learning. It also includes a Tkinter GUI for selecting companies, viewing current prices, and visualizing predicted stock trends.',
