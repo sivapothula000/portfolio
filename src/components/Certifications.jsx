@@ -8,6 +8,7 @@ import humanComputerInteractionImg from '../assets/humanComputerInteraction.webp
 import cloudComputingImg from '../assets/cloudComputing.webp';
 import largeLanguageModelImg from '../assets/largeLanguageModel.webp';
 import dataStructuresImg from '../assets/dataStructuresAndAlgorithms.webp';
+import gitImg from '../assets/github.webp';
 const certifications = [
   {
     title: 'Joy of Computing Using Python – NPTEL',
@@ -31,6 +32,10 @@ const certifications = [
     title: 'Data Structures and Algorithms using Java – NPTEL',
     image: dataStructuresImg,
     link: '/Data_Structure_and_Algorithms_using_Java(NPTEL).pdf'
+  },{
+    title: 'Git/GitHub – NPTEL',
+    image: gitImg,
+    link: '/GitHub(CodeChef).pdf'
   }
 ];
 
