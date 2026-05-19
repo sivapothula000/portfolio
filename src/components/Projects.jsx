@@ -3,13 +3,13 @@ import { motion } from 'framer-motion';
 import { ExternalLink, Code } from 'lucide-react';
 import { FaGithub } from 'react-icons/fa';
 import './Projects.css';
-import travelGuardianImg from '../assets/travelguardian.png';
+import travelGuardianImg from '../assets/travelguardian.webp';
 import multiMlModelImg from '../assets/ml_models.png';
-import ecommerceImg from '../assets/ecommerce.png';
+import ecommerceImg from '../assets/ecommerce.webp';
 import stockMarketImg from '../assets/stockMarket.png';
 import toDoImg from '../assets/ToDoList.png';
 import weatherImg from '../assets/weather.png';
-import portfolioImg from '../assets/portfolio.png';
+import portfolioImg from '../assets/portfolio.webp';
 
 
 const projectsData = [

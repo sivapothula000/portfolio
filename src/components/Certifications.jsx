@@ -3,13 +3,34 @@ import { motion } from 'framer-motion';
 import './Certifications.css';
 
 
-import joyOfComputingImg from '../assets/joyOfComputing.png';
-
+import joyOfComputingImg from '../assets/joyOfComputing.webp';
+import humanComputerInteractionImg from '../assets/humanComputerInteraction.webp';
+import cloudComputingImg from '../assets/cloudComputing.webp';
+import largeLanguageModelImg from '../assets/largeLanguageModel.webp';
+import dataStructuresImg from '../assets/dataStructuresAndAlgorithms.webp';
 const certifications = [
   {
     title: 'Joy of Computing Using Python – NPTEL',
     image: joyOfComputingImg,
     link: '/Joy_of_Computing(NPTEL).pdf'
+  },
+   {
+    title: 'Cloud Computing – NPTEL',
+    image: cloudComputingImg,
+    link: '/Cloud_Computing(NPTEL).pdf'
+  },
+  {
+    title: 'Introduction to Large Language Model(LLMs) – NPTEL',
+    image: largeLanguageModelImg,
+    link: '/Introduction_to_Large_Language_Models(NPTEL).pdf'
+  },{
+    title: 'Human Computer Interaction – NPTEL',
+    image: humanComputerInteractionImg,
+    link: '/Human_Computer_Interaction(NPTEL).pdf'
+  },{
+    title: 'Data Structures and Algorithms using Java – NPTEL',
+    image: dataStructuresImg,
+    link: '/Data_Structure_and_Algorithms_using_Java(NPTEL).pdf'
   }
 ];
 
@@ -51,11 +72,13 @@ const Certifications = () => {
               alt={cert.title}
               className="cert-image"
             />
+            
 
           </motion.div>
         ))}
 
-      </div>
+      </div><br></br>
+       
     </section>
   );
 };
