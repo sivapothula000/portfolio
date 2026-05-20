@@ -11,6 +11,7 @@ import dataStructuresImg from '../assets/dataStructuresAndAlgorithms.webp';
 import gitImg from '../assets/github.webp';
 import practiceJavaImg from '../assets/practiceJava.webp';
 import practicePythonImg from '../assets/practicePython.webp';
+import genAIImg from '../assets/generative_AI.webp';
 const certifications = [
   {
     title: 'Joy of Computing Using Python – NPTEL',
@@ -34,6 +35,10 @@ const certifications = [
     title: 'Data Structures and Algorithms using Java – NPTEL',
     image: dataStructuresImg,
     link: '/Data_Structure_and_Algorithms_using_Java(NPTEL).pdf'
+  },{
+    title: 'Generative AI – L4G',
+    image: genAIImg,
+    link: '/Generative_AI(L4G).pdf'
   },{
     title: 'Git/GitHub – CodeChef',
     image: gitImg,
