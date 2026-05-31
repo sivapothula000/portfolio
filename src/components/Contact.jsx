@@ -1,13 +1,26 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Send, FileText, Mail, MapPin } from 'lucide-react';
-import { FaGithub, FaLinkedin } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaWhatsapp } from 'react-icons/fa';
 import './Contact.css';
 import emailjs from "@emailjs/browser";
 
 const Contact = () => {
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
   const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const whatsAppMessage = encodeURIComponent(`
+Hi Siva,
+
+Name: ${formData.name}
+Email: ${formData.email}
+
+Message:
+${formData.message}
+`);
+
+const whatsAppUrl =
+  `https://wa.me/${import.meta.env.VITE_WHATSAPP_NUMBER}?text=${whatsAppMessage}`;
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -146,9 +159,21 @@ const Contact = () => {
               ></textarea>
             </div>
 
-            <button type="submit" className="btn btn-primary submit-btn" disabled={isSubmitting}>
-              {isSubmitting ? 'Sending...' : <><Send size={18} /> Send Message</>}
-            </button>
+            <div className="contact-actions">
+              <button type="submit" className="btn btn-primary submit-btn" disabled={isSubmitting}>
+                {isSubmitting ? 'Sending...' : <><Send size={18} /> Send Message</>}
+              </button>
+
+              <a
+                href={whatsAppUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-primary submit-btn"
+              >
+                <FaWhatsapp size={18} />
+                WhatsApp Me
+              </a>
+            </div>
           </form>
         </motion.div>
       </div>
