@@ -45,6 +45,7 @@ const Navbar = () => {
               to={item.to}
               smooth={true}
               duration={500}
+              offset={-90}
               spy={true}
               activeClass="active-link"
               className="nav-item"
@@ -73,6 +74,7 @@ const Navbar = () => {
               to={item.to}
               smooth={true}
               duration={500}
+              offset={-90}
               onClick={() => setIsOpen(false)}
               className="mobile-nav-item"
             >
