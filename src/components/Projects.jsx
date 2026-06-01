@@ -10,6 +10,7 @@ import stockMarketImg from '../assets/stockMarket.png';
 import toDoImg from '../assets/ToDoList.png';
 import weatherImg from '../assets/weather.png';
 import portfolioImg from '../assets/portfolio.webp';
+import pdfRagImg from '../assets/pdfRag.webp';
 
 
 const projectsData = [
@@ -29,6 +30,16 @@ const projectsData = [
     github: 'https://github.com/sivapothula000/ML_Models.git',
     demo: 'https://siva-dl-models.streamlit.app/'
   },
+  {
+  title: 'PDF RAG Assistant',
+  description: 'An AI-powered PDF Question Answering application built using Streamlit, FAISS, Sentence Transformers, and Google Gemini. Users can upload PDF documents and interact with them through a ChatGPT-style conversational interface. The system extracts text from PDFs, performs semantic search using vector embeddings, retrieves the most relevant content through FAISS, and generates context-aware answers using Google Gemini. The project demonstrates Retrieval-Augmented Generation (RAG), vector databases, embeddings, semantic search, and LLM integration.',
+  image: pdfRagImg,
+  tech: [
+    'Python','Streamlit','FAISS','Sentence Transformers','Google Gemini','PyPDF','NumPy','RAG'
+  ],
+  github: 'https://github.com/sivapothula000/PDF_RAG_ASSISTANT.git',
+  demo: 'https://siva-pdf-rag-assistant.streamlit.app/'
+},
   {
   title: 'To-Do List App',
   description: 'A full-stack task management application that allows users to add, view, and delete tasks through a simple and responsive interface. The frontend is built using HTML, CSS, and JavaScript, while the backend is developed using Node.js and Express.js. Task data is stored persistently in a MySQL database, ensuring tasks remain saved even after page refresh. The application demonstrates CRUD operations and REST API communication between the client and server.',
