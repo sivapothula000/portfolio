@@ -42,7 +42,9 @@ const ProjectDetails = () => {
   return (
     <section className="project-details-page">
       <div className="container">
-        <button className="back-btn" onClick={() => navigate('/')}
+        <button
+          className="back-btn"
+          onClick={() => navigate({ pathname: '/', hash: '#projects' })}
         >
           <ArrowLeft size={18} />
           Back
