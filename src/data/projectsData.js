@@ -90,7 +90,7 @@ export const projectsData = [
   ],
 
   github:
-    'https://github.com/YOUR_GITHUB_USERNAME/Instant-Msg',
+    'https://github.com/sivapothula000/Instant-Msg.git',
 
   demo:
     'https://super-instant-msg.vercel.app'
