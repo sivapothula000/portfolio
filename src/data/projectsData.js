@@ -22,56 +22,71 @@ import travelImg2 from '../assets/travelguardianAI/travelSafety.webp';
 import travelImg3 from '../assets/travelguardianAI/travelLocalServiceMap.webp';
 import travelImg4 from '../assets/travelguardianAI/travelLocalService.webp';
 import travelImg5 from '../assets/travelguardianAI/travelEmergency.webp';
+import instantMsgImg1 from '../assets/InstantMessage/InstantMsgImg1.png';
+import instantMsgImg2 from '../assets/InstantMessage/InstantMsgImg2.png';
+import instantMsgImg3 from '../assets/InstantMessage/InstantMsgImg3.png';
+import instantMsgImg4 from '../assets/InstantMessage/InstantMsgImg4.png';
 
 export const projectsData = [
-  {
-  slug: 'portfolio-website',
+{
+  slug: 'instant-msg',
 
-  title: 'Personal Portfolio Website',
+  title: 'Instant Msg - Real-Time Chat Application',
 
   images: [
-    portfolioImg1,
-    portfolioImg2,
-    portfolioImg3,
-    portfolioImg4,
-    portfolioImg5,
+    instantMsgImg1,
+    instantMsgImg2,
+    instantMsgImg3,
+    instantMsgImg4,
   ],
 
   shortDescription:
-    'A modern developer portfolio showcasing projects, skills, certifications, and achievements.',
+    'A modern real-time chat application with temporary room-based messaging, built using React, Node.js, and Socket.IO.',
 
   fullDescription:
-    'A fully responsive personal portfolio website built to showcase my projects, technical skills, certifications, achievements, and contact information. The portfolio features a modern glassmorphism design, smooth animations using Framer Motion, project showcase pages, responsive layouts, and an AI-powered roadmap for future enhancements. It serves as my professional online presence and helps recruiters and developers learn more about my work and experience.',
+    'Instant Msg is a full-stack real-time communication platform that enables users to create or join temporary chat rooms using unique room codes without requiring registration or permanent data storage. Built with React, Node.js, Express.js, and Socket.IO, the application provides instant messaging, online user presence, typing indicators, join and leave notifications, emoji support, voice messaging, and a responsive user interface. The project demonstrates practical implementation of WebSocket-based real-time communication, room management, and cloud deployment using Vercel and Render.',
 
   features: [
-    'Responsive design for all devices',
-    'Modern glassmorphism UI',
-    'Project showcase section',
-    'Dedicated project details pages',
-    'Skills and certifications display',
-    'WhatsApp and contact form integration',
-    'Smooth animations with Framer Motion',
-    'Dark theme design',
-    'Resume download functionality',
-    'SEO-friendly structure'
+    'Real-time room-based chat',
+    'Temporary chat rooms with unique room codes',
+    'Instant user join and leave notifications',
+    'Online user presence',
+    'Typing indicators',
+    'Responsive mobile and desktop interface',
+    'Voice message support',
+    'Emoji picker',
+    'Real-time message synchronization',
+    'Chat history for room participants',
+    'Copy room code functionality',
+    'Settings panel',
+    'Auto scroll and smart chat navigation',
+    'Modern chat UI',
+    'Cloud deployment using Vercel and Render'
   ],
 
   tech: [
-    'React',
+    'React.js',
     'Vite',
+    'Node.js',
+    'Express.js',
+    'Socket.IO',
     'JavaScript',
-    'HTML',
-    'CSS',
-    'Framer Motion',
-    'React Router'
+    'HTML5',
+    'CSS3',
+    'WebSocket',
+    'Render',
+    'Vercel',
+    'Git',
+    'GitHub'
   ],
 
   github:
-    'https://github.com/sivapothula000/portfolio',
+    'https://github.com/YOUR_GITHUB_USERNAME/Instant-Msg',
 
   demo:
-    'https://portfoliosiva-two.vercel.app/'
-},
+    'https://super-instant-msg.vercel.app'
+}
+,
   {
   slug: 'ml-multi-model-system',
 
@@ -251,6 +266,54 @@ export const projectsData = [
 
   demo:
     'https://weather-app-seven-bay-68.vercel.app/'
+},
+{
+  slug: 'portfolio-website',
+
+  title: 'Personal Portfolio Website',
+
+  images: [
+    portfolioImg1,
+    portfolioImg2,
+    portfolioImg3,
+    portfolioImg4,
+    portfolioImg5,
+  ],
+
+  shortDescription:
+    'A modern developer portfolio showcasing projects, skills, certifications, and achievements.',
+
+  fullDescription:
+    'A fully responsive personal portfolio website built to showcase my projects, technical skills, certifications, achievements, and contact information. The portfolio features a modern glassmorphism design, smooth animations using Framer Motion, project showcase pages, responsive layouts, and an AI-powered roadmap for future enhancements. It serves as my professional online presence and helps recruiters and developers learn more about my work and experience.',
+
+  features: [
+    'Responsive design for all devices',
+    'Modern glassmorphism UI',
+    'Project showcase section',
+    'Dedicated project details pages',
+    'Skills and certifications display',
+    'WhatsApp and contact form integration',
+    'Smooth animations with Framer Motion',
+    'Dark theme design',
+    'Resume download functionality',
+    'SEO-friendly structure'
+  ],
+
+  tech: [
+    'React',
+    'Vite',
+    'JavaScript',
+    'HTML',
+    'CSS',
+    'Framer Motion',
+    'React Router'
+  ],
+
+  github:
+    'https://github.com/sivapothula000/portfolio',
+
+  demo:
+    'https://portfoliosiva-two.vercel.app/'
 },
 {
   slug: 'stock-market-price-prediction',
