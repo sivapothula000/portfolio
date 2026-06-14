@@ -1,5 +1,4 @@
 import ecommerceImg from '../assets/ecommerce.webp';
-import weatherImg from '../assets/weather.png';
 import portfolioImg4 from '../assets/portfolio/portfolioCertificates.webp';
 import portfolioImg5 from '../assets/portfolio/portfolioContact.webp';
 import portfolioImg1 from '../assets/portfolio/portfolioHome.webp';
@@ -9,11 +8,19 @@ import mlMultiModelsImg1 from '../assets/mlMultiModels/mlHome.png';
 import mlMultiModelsImg2 from '../assets/mlMultiModels/mlEmailSpam.png';
 import mlMultiModelsImg3 from '../assets/mlMultiModels/mlHandWritten.png';
 import mlMultiModelsImg4 from '../assets/mlMultiModels/mlHouse.png';
+import mlModelMainImg from '../assets/mlMultiModels/thumbnailImg.webp';
+import PDFRAGmainImg from '../assets/pdfRAG/thumbnailImg.webp';
 import pdfRAGImg1 from '../assets/pdfRAG/pdfRAGhome.png';
 import pdfRAGImg2 from '../assets/pdfRAG/pdfRAGchat.png';
+import pdfRAGImg3 from '../assets/pdfRAG/pdfRAGDetails.webp';
+import todoMainImg from '../assets/todoList/thumbnailImg.webp';
 import todoImg1 from '../assets/todoList/todoSignUp.png';
 import todoImg2 from '../assets/todoList/todoLogin.png';
 import todoImg3 from '../assets/todoList/todoTasks.png';
+import todoImg4 from '../assets/todoList/todoDetails.webp';
+import weatherMainImage from '../assets/weather/thumbnailImg.webp';
+import weatherImg1 from '../assets/weather/weather.png';
+import weatherImg2 from '../assets/weather/weatherDetails.webp';
 import stockPredictImg1 from '../assets/stockPricePrediction/stockPredictionhome.png';
 import stockPredictImg2 from '../assets/stockPricePrediction/stockPredictionselected.png';
 import stockPredictImg3 from '../assets/stockPricePrediction/stockPredictionPrice.png';
@@ -22,6 +29,7 @@ import travelImg2 from '../assets/travelguardianAI/travelSafety.webp';
 import travelImg3 from '../assets/travelguardianAI/travelLocalServiceMap.webp';
 import travelImg4 from '../assets/travelguardianAI/travelLocalService.webp';
 import travelImg5 from '../assets/travelguardianAI/travelEmergency.webp';
+import mainImg from '../assets/InstantMessage/thumbnailImg.webp';
 import instantMsgImg1 from '../assets/InstantMessage/InstantMsgImg1.png';
 import instantMsgImg2 from '../assets/InstantMessage/InstantMsgImg2.png';
 import instantMsgImg3 from '../assets/InstantMessage/InstantMsgImg3.png';
@@ -34,6 +42,7 @@ export const projectsData = [
   title: 'Instant Msg - Real-Time Chat Application',
 
   images: [
+    mainImg,
     instantMsgImg1,
     instantMsgImg2,
     instantMsgImg3,
@@ -93,6 +102,7 @@ export const projectsData = [
   title: 'ML Multi-Model System',
 
   images: [
+    mlModelMainImg,
     mlMultiModelsImg1,
     mlMultiModelsImg2,
     mlMultiModelsImg3,
@@ -137,8 +147,11 @@ export const projectsData = [
   title: 'PDF RAG Assistant',
 
   images: [
+    PDFRAGmainImg,
     pdfRAGImg1,
     pdfRAGImg2,
+    pdfRAGImg3,
+    pdfRAGImg2
   ],
 
   shortDescription:
@@ -185,9 +198,11 @@ export const projectsData = [
   title: 'To-Do List App',
 
   images: [
+    todoMainImg,
     todoImg1,
     todoImg2,
     todoImg3,
+    todoImg4
   ],
 
   shortDescription:
@@ -230,7 +245,9 @@ export const projectsData = [
   title: 'Weather App',
 
   images: [
-    weatherImg,
+    weatherMainImage,
+    weatherImg1,
+    weatherImg2
 
   ],
 
