@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
 .about-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -9,6 +10,9 @@
   font-size: 1.15rem;
   line-height: 1.8;
   color: var(--text-muted);
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  
+
 }
 
 .about-text-content p {

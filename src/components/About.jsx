@@ -69,7 +69,7 @@ const About = () => {
           <motion.div variants={itemVariants} className="glass-card bento-card">
             <div className="bento-icon"><Target size={28} /></div>
             <h3>Career Goals</h3>
-            <p className="bento-highlight">Senior Full Stack Engineer</p>
+            <p className="bento-highlight">AI Full Stack Developer</p>
             <p className="bento-sub">Innovative Tech Companies</p>
           </motion.div>
 

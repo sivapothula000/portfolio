@@ -41,7 +41,7 @@ const Hero = () => {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="hero-subtitle"
           >
-            Full Stack Developer <span className="separator">|</span> AI Enthusiast
+           AI Full Stack Developer 
           </motion.h2>
 
           <motion.p 
