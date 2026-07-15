@@ -10,6 +10,7 @@ import Contact from './components/Contact';
 import SivaAI from './components/AIAssistant';
 import ProjectDetails from './pages/ProjectDetails';
 
+
 const HomePage = () => (
   <div className="app-container">
     <Navbar />
@@ -22,6 +23,7 @@ const HomePage = () => (
       <Contact />
     </main>
     <SivaAI />
+    
   </div>
 );
 
