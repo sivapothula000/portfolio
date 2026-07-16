@@ -5,7 +5,7 @@ import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import { SiCodechef, SiLeetcode } from 'react-icons/si';
 import './Hero.css';
 import { Link } from 'react-scroll';
-import heroImg from '../assets/hero2.png';
+import heroImg from '../assets/siva_toned.png';
 
 const Hero = () => {
   return (
