@@ -12,6 +12,9 @@ import gitImg from '../assets/github.webp';
 import practiceJavaImg from '../assets/practiceJava.webp';
 import practicePythonImg from '../assets/practicePython.webp';
 import genAIImg from '../assets/generative_AI.webp';
+import htmlCssImg from '../assets/htmlCss.webp';
+import javaScriptImg from '../assets/learnJavaScript.webp';
+import sqlImg from '../assets/learnJavaScript.webp';
 const certifications = [
   {
     title: 'Joy of Computing Using Python – NPTEL',
@@ -43,6 +46,21 @@ const certifications = [
     title: 'Git/GitHub – CodeChef',
     image: gitImg,
     link: '/GitHub(CodeChef).pdf'
+  },
+  {
+    title: 'Learn SQL – CodeChef',
+    image: sqlImg,
+    link: '/Learn_SQL(CodeChef).pdf'
+  },
+  {
+    title: 'Learn HTML/CSS – CodeChef',
+    image: htmlCssImg,
+    link: '/Learn_HTML_CSS.pdf'
+  },
+  {
+    title: 'Learn JavaScript – CodeChef',
+    image: javaScriptImg,
+    link: '/Learn_JavaScript(CodeChef).pdf'
   },{
     title: 'Practice Java – CodeChef',
     image: practiceJavaImg,
