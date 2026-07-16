@@ -14,7 +14,7 @@ import practicePythonImg from '../assets/practicePython.webp';
 import genAIImg from '../assets/generative_AI.webp';
 import htmlCssImg from '../assets/htmlCss.webp';
 import javaScriptImg from '../assets/learnJavaScript.webp';
-import sqlImg from '../assets/learnJavaScript.webp';
+import sqlImg from '../assets/learnSQL.webp';
 const certifications = [
   {
     title: 'Joy of Computing Using Python – NPTEL',
