@@ -93,7 +93,18 @@ router = APIRouter(
 )
 
 
-generator = PortfolioAnswerGenerator()
+generator = None
+
+
+def get_generator():
+
+    global generator
+
+    if generator is None:
+
+        generator = PortfolioAnswerGenerator()
+
+    return generator
 
 
 @router.post(
@@ -106,7 +117,7 @@ generator = PortfolioAnswerGenerator()
 def chat(
     request: Request,
     chat_request: ChatRequest
-):
+    ):
 
     try:
 
@@ -114,10 +125,10 @@ def chat(
             chat_request.message.strip()
         )
 
-        result = (
-            generator.generate_answer(
-                question=message
-            )
+        portfolio_generator = get_generator()
+
+        result = portfolio_generator.generate_answer(
+        question=message
         )
 
         return ChatResponse(
