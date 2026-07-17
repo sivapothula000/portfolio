@@ -1,0 +1,71 @@
+{
+  "categories": [
+    {
+      "id": "programming-languages",
+      "name": "Programming Languages",
+      "skills": ["Python", "Java"]
+    },
+    {
+      "id": "backend-development",
+      "name": "Backend Development",
+      "description": "Backend development, server-side programming, REST API development, and backend technologies used by Pothula Siva Anand.",
+      "skills": ["Node.js", "Express.js", "FastAPI"]
+    },
+    {
+      "id": "machine-learning-ai",
+      "name": "Machine Learning and AI",
+      "skills": [
+        "Scikit-learn",
+        "Natural Language Processing (NLP)",
+        "TF-IDF",
+        "Regression",
+        "Classification",
+        "LSTM"
+      ]
+    },
+    {
+      "id": "generative-ai",
+      "name": "Generative AI",
+      "skills": [
+        "Retrieval-Augmented Generation (RAG)",
+        "LLM Applications",
+        "Prompt Engineering",
+        "LangChain",
+        "ChromaDB",
+        "Embeddings",
+        "Hugging Face"
+      ]
+    },
+    {
+      "id": "web-development",
+      "name": "Web Development",
+      "skills": ["HTML5", "CSS3", "JavaScript", "React", "Streamlit"]
+    },
+    {
+      "id": "databases",
+      "name": "Databases",
+      "skills": ["MySQL", "MongoDB"]
+    },
+    {
+      "id": "tools",
+      "name": "Tools",
+      "skills": ["Git", "GitHub", "VS Code", "Firebase"]
+    },
+    {
+      "id": "core-concepts",
+      "name": "Core Computer Science Concepts",
+      "skills": [
+        "Data Structures and Algorithms",
+        "Object-Oriented Programming",
+        "Database Management Systems",
+        "Operating Systems",
+        "Computer Networks"
+      ]
+    },
+    {
+      "id": "soft-skills",
+      "name": "Soft Skills",
+      "skills": ["Problem-Solving", "Adaptability", "Communication", "Teamwork"]
+    }
+  ]
+}

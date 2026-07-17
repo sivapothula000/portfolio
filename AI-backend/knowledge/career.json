@@ -1,0 +1,27 @@
+{
+  "career": {
+    "current_status": "B.Tech student specializing in Artificial Intelligence and Machine Learning",
+    "graduation_year": 2027,
+    "primary_target_role": "AI Full Stack Developer",
+    "target_roles": [
+      "AI Full Stack Developer",
+      "AI/ML Engineer",
+      "Full Stack Developer"
+    ],
+    "areas_of_interest": [
+      "Artificial Intelligence",
+      "Machine Learning",
+      "Generative AI",
+      "Retrieval-Augmented Generation",
+      "Full Stack Development",
+      "Cloud Computing"
+    ],
+    "career_goal": "To build intelligent, scalable, real-world software applications by combining artificial intelligence, machine learning, and full-stack development.",
+    "currently_focused_on": [
+      "Building production-ready AI and full-stack projects",
+      "Improving data structures and algorithms skills",
+      "Learning modern AI engineering technologies",
+      "Preparing for software engineering and AI-related placement opportunities"
+    ]
+  }
+}

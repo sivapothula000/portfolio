@@ -1,0 +1,8 @@
+fastapi
+python-dotenv
+uvicorn
+chromadb
+sentence-transformers
+google-genai
+groq
+slowapi

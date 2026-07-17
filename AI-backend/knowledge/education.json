@@ -1,0 +1,57 @@
+{
+  "education": [
+    {
+      "id": "btech-aiml-vvit",
+      "degree": "Bachelor of Technology (B.Tech)",
+      "field_of_study": "Artificial Intelligence and Machine Learning",
+      "institution": "Vasireddy Venkatadri Institute of Technology",
+      "location": "Guntur, Andhra Pradesh, India",
+      "start_year": 2024,
+      "end_year": 2027,
+      "status": "Pursuing",
+      "cgpa": 8.4
+    },
+    {
+      "id": "diploma-eee",
+      "degree": "Diploma",
+      "field_of_study": "Electrical and Electronics Engineering",
+      "institution": "A.A.N.M & V.V.R.S.R Polytechnic",
+      "location": "Gudlavalleru, Andhra Pradesh, India",
+      "start_year": 2021,
+      "end_year": 2024,
+      "status": "Completed",
+      "percentage": 93.2
+    },
+    {
+      "education_level": "Secondary School Education",
+      "classes": "10th Class",
+      "start_year": 2020,
+      "end_year": 2021,
+      "completion_year": 2021,
+      "percentage": 98
+    },
+    {
+      "id": "high-school-education",
+      "degree": "High School Education",
+      "field_of_study": null,
+      "institution": "Z.P.H.S, MallaparajuGudem",
+      "location": "Krishna District, Andhra Pradesh, India",
+      "start_year": 2018,
+      "end_year": 2020,
+      "status": "Completed",
+      "grades_completed": "8th Class to 9th Class"
+    },
+    {
+      "id": "upper-primary-education",
+      "degree": "Upper Primary Education",
+      "field_of_study": null,
+      "institution": "Nethaji U.P. School English Medium",
+      "location": "Kothapalli, Krishna District, Andhra Pradesh, India",
+      "start_year": 2010,
+      "end_year": 2018,
+      "status": "Completed",
+      "percentage": 96,
+      "grades_completed": "Kindergarten to 7th Class"
+    }
+  ]
+}

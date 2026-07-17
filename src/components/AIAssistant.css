@@ -1,4 +1,7 @@
-/* Floating AI Icon */
+/* ================================
+   FLOATING AI BUTTON
+================================ */
+
 .siva-ai-icon {
   position: fixed;
   bottom: 30px;
@@ -6,7 +9,11 @@
   width: 60px;
   height: 60px;
   border-radius: 50%;
-  background: linear-gradient(135deg, var(--accent-cyan), var(--accent-purple));
+  background: linear-gradient(
+    135deg,
+    var(--accent-cyan),
+    var(--accent-purple)
+  );
   display: flex;
   align-items: center;
   justify-content: center;
@@ -21,215 +28,743 @@
 .siva-ai-icon:hover {
   transform: scale(1.1);
   box-shadow: 0 12px 48px rgba(6, 182, 212, 0.6);
-  bottom: 35px;
 }
 
 .siva-ai-icon:active {
   transform: scale(0.95);
 }
 
-/* Modal Overlay */
+
+/* ================================
+   MODAL OVERLAY
+================================ */
+
 .siva-ai-modal-overlay {
   position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  inset: 0;
   background: rgba(0, 0, 0, 0.7);
   display: flex;
   align-items: center;
   justify-content: center;
   z-index: 1000;
-  backdrop-filter: blur(4px);
-  animation: fadeIn 0.3s ease;
+  backdrop-filter: blur(5px);
+  animation: fadeIn 0.25s ease;
+  padding: 20px;
 }
 
-/* Modal */
+
+/* ================================
+   CHAT WINDOW
+================================ */
+
 .siva-ai-modal {
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 16px;
-  width: 90%;
-  max-width: 500px;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+  width: 100%;
+  max-width: 520px;
+  height: min(700px, 85vh);
+
+  display: flex;
+  flex-direction: column;
+
+  background: rgba(12, 18, 30, 0.96);
+
+  border: 1px solid rgba(255, 255, 255, 0.12);
+
+  border-radius: 20px;
+
   overflow: hidden;
-  backdrop-filter: blur(10px);
+
+  box-shadow:
+    0 24px 80px rgba(0, 0, 0, 0.55),
+    0 0 40px rgba(6, 182, 212, 0.08);
+
+  backdrop-filter: blur(18px);
+
   animation: slideUp 0.3s ease;
 }
 
-/* Modal Header */
+
+/* ================================
+   HEADER
+================================ */
+
 .siva-ai-modal-header {
+  flex-shrink: 0;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 24px;
+
+  padding: 16px 18px;
+
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
   background: linear-gradient(
     135deg,
-    rgba(6, 182, 212, 0.1),
-    rgba(139, 92, 246, 0.1)
+    rgba(6, 182, 212, 0.12),
+    rgba(139, 92, 246, 0.12)
   );
 }
+
 
 .siva-ai-modal-title {
   display: flex;
   align-items: center;
   gap: 12px;
-  font-size: 18px;
-  font-weight: 600;
-  color: var(--text-main);
 }
 
-.siva-ai-modal-title svg {
-  color: var(--accent-cyan);
-}
 
-.siva-ai-close-btn {
-  background: none;
-  border: none;
-  color: var(--text-muted);
-  cursor: pointer;
-  padding: 4px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.2s ease;
-  border-radius: 6px;
-}
-
-.siva-ai-close-btn:hover {
-  background: rgba(255, 255, 255, 0.1);
-  color: var(--text-main);
-}
-
-/* Modal Content */
-.siva-ai-modal-content {
-  padding: 32px 24px;
-  min-height: 200px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.siva-ai-message {
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 16px;
-}
-
-.updating-message p {
-  color: var(--text-main);
-  font-size: 16px;
-  line-height: 1.6;
-  margin: 0;
-}
-
-.updating-message strong {
-  background: linear-gradient(135deg, var(--accent-cyan), var(--accent-purple));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  font-weight: 700;
-}
-
-.siva-ai-message .sub-text {
-  color: var(--text-muted);
-  font-size: 14px;
-  max-width: 300px;
-}
-
-/* Loading Spinner */
-.loading-spinner {
+.siva-ai-header-icon {
   width: 40px;
   height: 40px;
-  border: 3px solid rgba(255, 255, 255, 0.1);
-  border-top-color: var(--accent-cyan);
-  border-radius: 50%;
-  animation: spin 1s linear infinite;
-}
 
-@keyframes spin {
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-/* Modal Footer */
-.siva-ai-modal-footer {
-  padding: 16px 24px;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
   display: flex;
-  justify-content: flex-end;
-  gap: 12px;
-}
+  align-items: center;
+  justify-content: center;
 
-.close-btn {
-  background: linear-gradient(135deg, var(--accent-cyan), var(--accent-purple));
+  border-radius: 12px;
+
   color: white;
-  border: none;
-  padding: 10px 24px;
-  border-radius: 8px;
-  cursor: pointer;
+
+  background: linear-gradient(
+    135deg,
+    var(--accent-cyan),
+    var(--accent-purple)
+  );
+
+  box-shadow: 0 4px 16px rgba(6, 182, 212, 0.25);
+}
+
+
+.siva-ai-modal-title > div:last-child {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+
+.siva-ai-modal-title span {
+  color: var(--text-main);
+  font-size: 16px;
   font-weight: 600;
+}
+
+
+.siva-ai-modal-title small {
+  color: var(--text-muted);
+  font-size: 12px;
+  font-weight: 400;
+}
+
+
+.siva-ai-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+
+.siva-ai-header-btn {
+  width: 36px;
+  height: 36px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: none;
+  border-radius: 9px;
+
+  background: transparent;
+
+  color: var(--text-muted);
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+
+.siva-ai-header-btn:hover {
+  color: var(--text-main);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+
+.siva-ai-header-btn:active {
+  transform: scale(0.92);
+}
+
+
+/* ================================
+   CHAT MESSAGES AREA
+================================ */
+
+.siva-ai-chat-content {
+  flex: 1;
+
+  min-height: 0;
+
+  padding: 20px 18px;
+
+  overflow-y: auto;
+
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+
+  scroll-behavior: smooth;
+}
+
+
+.siva-ai-chat-content::-webkit-scrollbar {
+  width: 5px;
+}
+
+
+.siva-ai-chat-content::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+
+.siva-ai-chat-content::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 10px;
+}
+
+
+/* ================================
+   MESSAGE ROWS
+================================ */
+
+.siva-ai-chat-row {
+  width: 100%;
+  display: flex;
+}
+
+
+.siva-ai-chat-row.assistant {
+  justify-content: flex-start;
+}
+
+
+.siva-ai-chat-row.user {
+  justify-content: flex-end;
+}
+
+
+/* ================================
+   MESSAGE BUBBLES
+================================ */
+
+.siva-ai-chat-message {
+  max-width: 82%;
+
+  padding: 11px 14px;
+
+  border-radius: 14px;
+
   font-size: 14px;
-  transition: all 0.3s ease;
+  line-height: 1.55;
+
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
 }
 
-.close-btn:hover {
+
+.siva-ai-chat-message.assistant {
+  color: var(--text-main);
+
+  background: rgba(255, 255, 255, 0.065);
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  border-bottom-left-radius: 5px;
+}
+
+
+.siva-ai-chat-message.user {
+  color: white;
+
+  background: linear-gradient(
+    135deg,
+    var(--accent-cyan),
+    var(--accent-purple)
+  );
+
+  border-bottom-right-radius: 5px;
+
+  box-shadow: 0 5px 18px rgba(6, 182, 212, 0.16);
+}
+
+
+/* ================================
+   TYPING INDICATOR
+================================ */
+
+.siva-ai-typing {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+
+  padding: 13px 16px;
+
+  border-radius: 14px;
+  border-bottom-left-radius: 5px;
+
+  background: rgba(255, 255, 255, 0.065);
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+
+.siva-ai-typing span {
+  width: 7px;
+  height: 7px;
+
+  border-radius: 50%;
+
+  background: var(--accent-cyan);
+
+  animation: typingBounce 1.2s infinite ease-in-out;
+}
+
+
+.siva-ai-typing span:nth-child(2) {
+  animation-delay: 0.15s;
+}
+
+
+.siva-ai-typing span:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+
+/* ================================
+   SUGGESTED QUESTIONS
+================================ */
+
+.siva-ai-suggestions {
+  flex-shrink: 0;
+
+  display: flex;
+  gap: 8px;
+
+  padding: 0 18px 14px;
+
+  overflow-x: auto;
+}
+
+
+.siva-ai-suggestions::-webkit-scrollbar {
+  display: none;
+}
+
+
+.siva-ai-suggestions button {
+  flex-shrink: 0;
+
+  padding: 8px 12px;
+
+  border-radius: 20px;
+
+  border: 1px solid rgba(6, 182, 212, 0.3);
+
+  background: rgba(6, 182, 212, 0.06);
+
+  color: var(--text-main);
+
+  font-size: 12px;
+
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+}
+
+
+.siva-ai-suggestions button:hover {
+  background: rgba(6, 182, 212, 0.14);
+
+  border-color: var(--accent-cyan);
+
+  transform: translateY(-1px);
+}
+
+
+/* ================================
+   INPUT AREA
+================================ */
+
+.siva-ai-input-container {
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
+
+  padding: 14px 18px 10px;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+
+  background: rgba(0, 0, 0, 0.12);
+}
+
+
+.siva-ai-input-container textarea {
+  flex: 1;
+
+  min-height: 44px;
+  max-height: 110px;
+
+  padding: 11px 14px;
+
+  resize: none;
+
+  border-radius: 12px;
+
+  border: 1px solid rgba(255, 255, 255, 0.1);
+
+  outline: none;
+
+  background: rgba(255, 255, 255, 0.055);
+
+  color: var(--text-main);
+
+  font-family: inherit;
+  font-size: 14px;
+  line-height: 1.45;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+
+.siva-ai-input-container textarea::placeholder {
+  color: var(--text-muted);
+}
+
+
+.siva-ai-input-container textarea:focus {
+  border-color: rgba(6, 182, 212, 0.55);
+
+  box-shadow: 0 0 0 3px rgba(6, 182, 212, 0.08);
+}
+
+
+.siva-ai-input-container textarea:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+
+/* ================================
+   SEND BUTTON
+================================ */
+
+.siva-ai-send-btn {
+  flex-shrink: 0;
+
+  width: 44px;
+  height: 44px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: none;
+  border-radius: 12px;
+
+  background: linear-gradient(
+    135deg,
+    var(--accent-cyan),
+    var(--accent-purple)
+  );
+
+  color: white;
+
+  cursor: pointer;
+
+  box-shadow: 0 5px 18px rgba(6, 182, 212, 0.2);
+
+  transition:
+    transform 0.2s ease,
+    opacity 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+
+.siva-ai-send-btn:hover:not(:disabled) {
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(6, 182, 212, 0.4);
+
+  box-shadow: 0 8px 24px rgba(6, 182, 212, 0.3);
 }
 
-.close-btn:active {
-  transform: translateY(0);
+
+.siva-ai-send-btn:active:not(:disabled) {
+  transform: scale(0.94);
 }
 
-/* Animations */
+
+.siva-ai-send-btn:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+
+/* ================================
+   DISCLAIMER
+================================ */
+
+.siva-ai-disclaimer {
+  flex-shrink: 0;
+
+  padding: 0 18px 10px;
+
+  text-align: center;
+
+  color: var(--text-muted);
+
+  font-size: 10px;
+
+  background: rgba(0, 0, 0, 0.12);
+}
+
+
+/* ================================
+   ANIMATIONS
+================================ */
+
 @keyframes fadeIn {
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
   }
 }
+
 
 @keyframes slideUp {
   from {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(20px) scale(0.98);
   }
+
   to {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateY(0) scale(1);
   }
 }
 
-/* Mobile Responsiveness */
+
+@keyframes typingBounce {
+  0%,
+  60%,
+  100% {
+    transform: translateY(0);
+    opacity: 0.45;
+  }
+
+  30% {
+    transform: translateY(-5px);
+    opacity: 1;
+  }
+}
+
+
+/* ================================
+   MOBILE RESPONSIVENESS
+================================ */
+
 @media (max-width: 768px) {
+
   .siva-ai-icon {
     bottom: 20px;
     right: 20px;
+
     width: 54px;
     height: 54px;
   }
 
-  .siva-ai-icon:hover {
-    bottom: 23px;
+
+  .siva-ai-modal-overlay {
+    padding: 0;
+
+    align-items: flex-end;
   }
+
 
   .siva-ai-modal {
-    width: 85%;
-    max-width: 90vw;
+    width: 100%;
+    max-width: none;
+
+    height: 88dvh;
+    max-height: 88dvh;
+
+    border-radius: 20px 20px 0 0;
+
+    border-bottom: none;
   }
 
-  .siva-ai-modal-content {
-    padding: 24px 20px;
+
+  .siva-ai-modal-header {
+    padding: 14px 15px;
   }
 
-  .siva-ai-message .sub-text {
-    font-size: 13px;
+
+  .siva-ai-header-icon {
+    width: 36px;
+    height: 36px;
+
+    border-radius: 10px;
   }
+
+
+  .siva-ai-modal-title span {
+    font-size: 15px;
+  }
+
+
+  .siva-ai-chat-content {
+    padding: 16px 14px;
+  }
+
+
+  .siva-ai-chat-message {
+    max-width: 88%;
+
+    font-size: 13.5px;
+  }
+
+
+  .siva-ai-suggestions {
+    padding:
+      0
+      14px
+      12px;
+  }
+
+
+  .siva-ai-input-container {
+    padding:
+      12px
+      14px
+      8px;
+  }
+
+
+  .siva-ai-disclaimer {
+    padding:
+      0
+      14px
+      calc(
+        8px
+        + env(safe-area-inset-bottom)
+      );
+  }
+
+}
+
+
+/* ================================
+   SMALL MOBILE
+================================ */
+
+@media (max-width: 420px) {
+
+  .siva-ai-modal {
+    height: 92dvh;
+    max-height: 92dvh;
+  }
+
+
+
+  .siva-ai-modal-title small {
+    display: none;
+  }
+
+
+  .siva-ai-chat-message {
+    max-width: 91%;
+  }
+
+}
+
+
+/* ================================
+   AI MESSAGE CONTENT
+================================ */
+
+.siva-ai-message-text {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+
+/* ================================
+   VERIFIED ACTION BUTTONS
+================================ */
+
+.siva-ai-message-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+
+  margin-top: 12px;
+}
+
+
+.siva-ai-action-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 7px 12px;
+
+  border-radius: 8px;
+
+  border: 1px solid rgba(6, 182, 212, 0.35);
+
+  background: linear-gradient(
+    135deg,
+    rgba(6, 182, 212, 0.12),
+    rgba(139, 92, 246, 0.12)
+  );
+
+  color: var(--text-main);
+
+  font-size: 12px;
+  font-weight: 500;
+
+  text-decoration: none;
+
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+}
+
+
+.siva-ai-action-btn:hover {
+  border-color: var(--accent-cyan);
+
+  background: linear-gradient(
+    135deg,
+    rgba(6, 182, 212, 0.22),
+    rgba(139, 92, 246, 0.22)
+  );
+
+  transform: translateY(-1px);
+}
+
+
+/* ================================
+   ERROR MESSAGE
+================================ */
+
+.siva-ai-chat-message.assistant.error {
+  border-color: rgba(239, 68, 68, 0.25);
 }

@@ -1,0 +1,80 @@
+{
+  "certifications": [
+    {
+      "title": "Joy of Computing Using Python",
+      "issuer": "NPTEL",
+      "category": "Programming",
+      "skills": ["Python"]
+    },
+    {
+      "title": "Cloud Computing",
+      "issuer": "NPTEL",
+      "category": "Cloud Computing"
+    },
+    {
+      "title": "Introduction to Large Language Models (LLMs)",
+      "issuer": "NPTEL",
+      "category": "Artificial Intelligence",
+      "skills": ["Large Language Models", "Generative AI"]
+    },
+    {
+      "title": "Human Computer Interaction",
+      "issuer": "NPTEL",
+      "category": "Computer Science"
+    },
+    {
+      "title": "Data Structures and Algorithms using Java",
+      "issuer": "NPTEL",
+      "category": "Data Structures and Algorithms",
+      "skills": ["Java", "DSA"]
+    },
+    {
+      "title": "Generative AI",
+      "issuer": "L4G",
+      "category": "Artificial Intelligence",
+      "skills": ["Generative AI"]
+    },
+    {
+      "title": "Git/GitHub",
+      "issuer": "CodeChef",
+      "category": "Development Tools",
+      "skills": ["Git", "GitHub"]
+    },
+    {
+      "title": "Learn SQL",
+      "issuer": "CodeChef",
+      "category": "Database",
+      "skills": ["SQL"]
+    },
+    {
+      "title": "Learn HTML/CSS",
+      "issuer": "CodeChef",
+      "category": "Web Development",
+      "skills": ["HTML", "CSS"]
+    },
+    {
+      "title": "Learn JavaScript",
+      "issuer": "CodeChef",
+      "category": "Web Development",
+      "skills": ["JavaScript"]
+    },
+    {
+      "title": "Learn Go",
+      "issuer": "CodeChef",
+      "category": "Programming",
+      "skills": ["Go"]
+    },
+    {
+      "title": "Practice Java",
+      "issuer": "CodeChef",
+      "category": "Programming",
+      "skills": ["Java"]
+    },
+    {
+      "title": "Practice Python",
+      "issuer": "CodeChef",
+      "category": "Programming",
+      "skills": ["Python"]
+    }
+  ]
+}
