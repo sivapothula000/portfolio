@@ -74,3 +74,5 @@ def allowed_origins(self):
                 origins.append(origin)
 
     return list(set(origins))
+
+settings = Settings()
