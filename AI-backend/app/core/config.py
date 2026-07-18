@@ -43,27 +43,34 @@ class Settings:
         )
     )
 
-    @property
-    def allowed_origins(self):
-        origins = [
-            self.FRONTEND_URL
+    FRONTEND_URL = os.getenv(
+    "FRONTEND_URL",
+    "http://localhost:5173"
+)
+
+MAX_MESSAGE_LENGTH = int(
+    os.getenv(
+        "MAX_MESSAGE_LENGTH",
+        "1000"
+    )
+)
+
+@property
+def allowed_origins(self):
+    origins = [
+        self.FRONTEND_URL,
+        "https://sivapothula.in",
+        "https://www.sivapothula.in",
+    ]
+
+    if self.ENVIRONMENT == "development":
+        development_origins = [
+            "http://localhost:5173",
+            "http://127.0.0.1:5173",
         ]
 
-        # Useful when Vite is accessed through either
-        # localhost or 127.0.0.1 during development.
-        if self.ENVIRONMENT == "development":
+        for origin in development_origins:
+            if origin not in origins:
+                origins.append(origin)
 
-            development_origins = [
-                "http://localhost:5173",
-                "http://127.0.0.1:5173"
-            ]
-
-            for origin in development_origins:
-
-                if origin not in origins:
-                    origins.append(origin)
-
-        return origins
-
-
-settings = Settings()
+    return list(set(origins))
