@@ -1,16 +1,15 @@
 from pathlib import Path
 
 import chromadb
-from sentence_transformers import SentenceTransformer
 
 from app.rag.knowledge_loader import load_knowledge
+from app.services.embedding_service import EmbeddingService
 
 
 BACKEND_ROOT = Path(__file__).resolve().parents[2]
 CHROMA_PATH = BACKEND_ROOT / "chroma_db"
 
 COLLECTION_NAME = "portfolio_knowledge"
-MODEL_NAME = "sentence-transformers/all-MiniLM-L6-v2"
 
 
 def ingest_knowledge():
@@ -19,11 +18,14 @@ def ingest_knowledge():
 
     documents = load_knowledge()
 
-    print(f"Loaded {len(documents)} knowledge documents.")
+    print(
+        f"Loaded {len(documents)} "
+        "knowledge documents."
+    )
 
-    print("Loading embedding model...")
+    print("Connecting to Gemini Embedding API...")
 
-    model = SentenceTransformer(MODEL_NAME)
+    embedding_service = EmbeddingService()
 
     print("Connecting to ChromaDB...")
 
@@ -31,8 +33,6 @@ def ingest_knowledge():
         path=str(CHROMA_PATH)
     )
 
-    # Recreate the collection so repeated ingestion does not
-    # leave old or duplicate knowledge behind.
     try:
         client.delete_collection(
             name=COLLECTION_NAME
@@ -41,25 +41,44 @@ def ingest_knowledge():
         pass
 
     collection = client.create_collection(
-        name=COLLECTION_NAME
+        name=COLLECTION_NAME,
+        metadata={
+            "hnsw:space": "cosine"
+        }
     )
 
     texts = []
     metadatas = []
     ids = []
+    embeddings = []
+
+    print("Generating Gemini embeddings...")
 
     for index, document in enumerate(documents):
 
-        texts.append(document["text"])
-        metadatas.append(document["metadata"])
-        ids.append(f"knowledge-{index}")
+        text = document["text"]
 
-    print("Generating embeddings...")
+        embedding = (
+            embedding_service.embed_document(
+                text
+            )
+        )
 
-    embeddings = model.encode(
-        texts,
-        normalize_embeddings=True
-    ).tolist()
+        texts.append(text)
+        metadatas.append(
+            document["metadata"]
+        )
+        ids.append(
+            f"knowledge-{index}"
+        )
+        embeddings.append(
+            embedding
+        )
+
+        print(
+            f"Embedded document "
+            f"{index + 1}/{len(documents)}"
+        )
 
     print("Saving vectors to ChromaDB...")
 
@@ -71,9 +90,17 @@ def ingest_knowledge():
     )
 
     print()
-    print("Ingestion completed successfully.")
-    print(f"Documents stored: {collection.count()}")
-    print(f"Vector database: {CHROMA_PATH}")
+    print(
+        "Gemini embedding ingestion "
+        "completed successfully."
+    )
+    print(
+        f"Documents stored: "
+        f"{collection.count()}"
+    )
+    print(
+        f"Vector database: {CHROMA_PATH}"
+    )
 
 
 if __name__ == "__main__":

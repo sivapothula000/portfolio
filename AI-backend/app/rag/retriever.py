@@ -2,62 +2,85 @@ from pathlib import Path
 import logging
 
 import chromadb
-from sentence_transformers import SentenceTransformer
+
+from app.services.embedding_service import (
+    EmbeddingService
+)
 
 
 BACKEND_ROOT = Path(__file__).resolve().parents[2]
 CHROMA_PATH = BACKEND_ROOT / "chroma_db"
 
 COLLECTION_NAME = "portfolio_knowledge"
-MODEL_NAME = "sentence-transformers/all-MiniLM-L6-v2"
-MAX_DISTANCE = 1.30
+
+# Cosine distance:
+# lower = more similar
+MAX_DISTANCE = 0.70
 
 logger = logging.getLogger(__name__)
+
+
 class PortfolioRetriever:
 
     def __init__(self):
 
         logger.info(
-    "Loading portfolio embedding model."
-)
+            "Initializing Gemini embedding service."
+        )
 
-        self.model = SentenceTransformer(MODEL_NAME)
+        self.embedding_service = (
+            EmbeddingService()
+        )
 
         logger.info(
-    "Connecting to portfolio vector database."
-)
+            "Connecting to portfolio vector database."
+        )
 
         self.client = chromadb.PersistentClient(
             path=str(CHROMA_PATH)
         )
 
         try:
-            self.collection = self.client.get_collection(
-                name=COLLECTION_NAME
+
+            self.collection = (
+                self.client.get_collection(
+                    name=COLLECTION_NAME
+                )
             )
+
         except Exception as error:
+
             raise RuntimeError(
-                "Portfolio knowledge collection was not found. "
-                "Run 'python -m app.rag.ingest' first."
+                "Portfolio knowledge collection "
+                "was not found. Run "
+                "'python -m app.rag.ingest' first."
             ) from error
 
 
-    def retrieve(self, query: str, top_k: int = 5):
+    def retrieve(
+        self,
+        query: str,
+        top_k: int = 5
+    ):
 
         if not query or not query.strip():
+
             raise ValueError(
                 "The search query cannot be empty."
             )
 
         query = query.strip()
 
-        query_embedding = self.model.encode(
-            query,
-            normalize_embeddings=True
-        ).tolist()
+        query_embedding = (
+            self.embedding_service.embed_query(
+                query
+            )
+        )
 
         results = self.collection.query(
-            query_embeddings=[query_embedding],
+            query_embeddings=[
+                query_embedding
+            ],
             n_results=top_k,
             include=[
                 "documents",
@@ -72,13 +95,18 @@ class PortfolioRetriever:
         metadatas = results["metadatas"][0]
         distances = results["distances"][0]
 
-        for document, metadata, distance in zip(
+        for (
+            document,
+            metadata,
+            distance
+        ) in zip(
             documents,
             metadatas,
             distances
         ):
-            # Ignore results that are too semantically distant
+
             if distance <= MAX_DISTANCE:
+
                 retrieved_documents.append(
                     {
                         "text": document,
@@ -88,8 +116,7 @@ class PortfolioRetriever:
                 )
 
         return retrieved_documents
-
-
+    
 if __name__ == "__main__":
 
     retriever = PortfolioRetriever()
@@ -113,7 +140,6 @@ if __name__ == "__main__":
                 top_k=5
             )
 
-            # Handle queries with no relevant knowledge
             if not results:
 
                 print(
@@ -151,15 +177,12 @@ if __name__ == "__main__":
                     )
 
                     print("\nContent:")
-
-                    print(
-                        result["text"]
-                    )
+                    print(result["text"])
 
                     print("-" * 60)
 
         except Exception as error:
 
             print(
-                f"Retrieval error: {error}"
+                f"\nRetrieval error: {error}"
             )

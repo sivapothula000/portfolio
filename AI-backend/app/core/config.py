@@ -7,6 +7,11 @@ load_dotenv()
 
 
 class Settings:
+    
+    GEMINI_API_KEY = os.getenv(
+        "GEMINI_API_KEY"
+    )
+    
     CHAT_RATE_LIMIT = os.getenv(
     "CHAT_RATE_LIMIT",
     "10/minute"
